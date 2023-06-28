@@ -1,0 +1,401 @@
+/* Estilos generales */
+.principal {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #04162f;
+}
+
+a {
+  color: #04162f;
+  text-decoration: none;
+}
+
+h3 {
+  color: rgb(191, 155, 81);
+}
+
+/* Navbar */
+nav {
+  background-color: #04162f;
+  color: rgb(191, 155, 81);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  /* Mover el logo hacia la izquierda */
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon:before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: rgb(191, 155, 81);
+  margin-bottom: 5px;
+}
+
+.menu-icon:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: rgb(191, 155, 81);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li:hover a {
+  filter: brightness(90%);
+  /* Ajusta el porcentaje de oscurecimiento según tu preferencia */
+}
+
+nav ul li a {
+  padding: 25px;
+  font-weight: bold;
+  color: rgb(191, 155, 81);
+}
+
+
+/* Sección Hero */
+#hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  display: flex;
+  width: 600%;
+  /* Ajusta el número de imágenes duplicadas multiplicando por 100% */
+  height: 100%;
+  animation: slide-animation 25s linear infinite;
+  /* Ajusta la duración de la transición */
+}
+
+.slide {
+  flex: 0 0 20.33%;
+  /* Ajusta el ancho de cada imagen (100% dividido por el número de imágenes) */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Sección Acerca de */
+#about {
+  background-color: #04162f;
+  color: #fff;
+  padding: 50px;
+}
+
+#about h2 {
+  color: #bf9b51;
+}
+
+.mision-vision {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container-mv {
+  background-color: rgba(4, 22, 47, 0.8);
+  border-radius: 2vh;
+  border-style: double;
+  border-color: #bf9b51;
+  padding: 30px;
+  width: 500px;
+  text-align: center;
+  background-image: url("../images/negmano.jpg");
+}
+
+.descripcion {
+  display: none;
+}
+
+.container-mv:hover .descripcion {
+  display: flex;
+  width: 500px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .mision-vision {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-mv {
+    width: 90%; /* Modificado */
+    max-width: none; /* Modificado */
+  }
+}
+
+/* Sección Servicios*/
+#services {
+  padding: 5px;
+  background-color: #04162f;
+}
+
+.card-servdes {
+  background-image: url("../images/service-desarrollo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.card-servinv {
+  background-image: url("../images/service-inversor.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.card-content {
+  background-color: rgba(4, 22, 47, 0.8);
+  padding: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  color: #bf9b51;
+}
+
+.card p {
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  background-color: #bf9b51;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card:first-child {
+  background-image: url("../images/service-desarrollo.jpg");
+}
+
+.card:last-child {
+  background-image: url("../images/service-inversor.jpg");
+}
+
+/* Sección Contacto */
+#contact {
+  background-color: #04162f;
+  color: #fff;
+  padding: 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.contact-container h2 {
+  color: #bf9b51;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-top: -180px;
+}
+
+.contact-info h2 {
+  margin-top: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form input[type="submit"] {
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="submit"] {
+  width: 150px;
+  /* Ajusta el ancho según tus preferencias */
+  background-color: #bf9b51;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/*Footer*/
+footer {
+  background-color: #04162f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* Ajusta la altura según tus preferencias */
+}
+
+footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+footer .logo img {
+  max-width: 100px;
+  /* Ajusta el ancho del logo según tus preferencias */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  /* Centra horizontalmente el logo */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  footer {
+    height: auto;
+    /* Altura automática para adaptarse al contenido */
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .logo img {
+    max-width: 80px;
+    /* Ajusta el ancho del logo para pantallas más pequeñas */
+    margin: 10px auto;
+    /* Centra horizontalmente el logo y agrega un espacio vertical */
+  }
+}
+
+
+/* Estilos para el menú hamburguesa */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* Centrar verticalmente */
+    padding: 10px;
+    background-color: #04162f;
+    width: 30%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    /* Alinear el menú hamburguesa a la derecha */
+    z-index: 1;
+    /* Asegurar que el menú esté por encima del contenido */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    font-size: 10px;
+    /* Tamaño de letra reducido */
+    text-align: center;
+    /* Texto centrado */
+  }
+
+  input[type="checkbox"]:checked~ul {
+    display: flex;
+    background-color: rgba(4, 22, 47, 0.8);
+    border-radius: 10px;
+  }
+
+  .logo {
+    margin-right: 0;
+    /* Reiniciar el margen derecho del logo */
+    justify-content: center;
+    /* Centrar el logo */
+  }
+}
